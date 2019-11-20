@@ -54,19 +54,25 @@ def location(new_player):
     print(new_player.room,
     room[new_player.room].description)
 
-# TODO: input validation ['n', 's', 'e', 'w'] and case for 'q'
-# should return True or False
-# while loop
-
 def input_validation(user_direction):
     valid_directions = ['n', 's', 'e', 'w']
     if user_direction == 'q':
         print('You have quit the game. Thanks for playing')
         return False
     elif user_direction not in valid_directions:
+        print(f'Please enter a valid direction: {valid_directions}')
         return False
     else:
         return True
 
+def user_input():
+    valid_directions = ['n', 's', 'e', 'w']
+    location(new_player)
+    print(f'Which way would you like to go, {valid_directions}?')
+    user_direction = input()
+    valid = input_validation(user_direction)
+    while valid is True:
+        user_input()
 
-while condition:
+
+user_input()
