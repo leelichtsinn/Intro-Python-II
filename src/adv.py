@@ -49,3 +49,35 @@ new_player = Player('Lee', 'outside')
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
+
+
+# TODO: input validation ['n', 's', 'e', 'w'] and case for 'q'
+# should return True or False
+# while loop
+
+def input_validation(user_direction):
+    valid_directions = ['n', 's', 'e', 'w']
+    if user_direction == 'q':
+        print('You have quit the game. Thanks for playing')
+        return False
+    elif user_direction not in valid_directions:
+        return False
+    else:
+        return True
+
+
+
+
+
+
+
+# while condition:
+#     selection = input('Select the direction you would like to travel: ')
+#
+#     try:
+#         selection
+#         if selection == 'q':
+#             print('You have quit the game. Thanks for playing!')
+#         elif selection
+#     execpt ValueError:
+#         print('Error, input was invalid')
