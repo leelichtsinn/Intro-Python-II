@@ -50,6 +50,9 @@ new_player = Player('Lee', 'outside')
 #
 # If the user enters "q", quit the game.
 
+def location(new_player):
+    print(new_player.room,
+    room[new_player.room].description)
 
 # TODO: input validation ['n', 's', 'e', 'w'] and case for 'q'
 # should return True or False
@@ -66,18 +69,4 @@ def input_validation(user_direction):
         return True
 
 
-
-
-
-
-
-# while condition:
-#     selection = input('Select the direction you would like to travel: ')
-#
-#     try:
-#         selection
-#         if selection == 'q':
-#             print('You have quit the game. Thanks for playing!')
-#         elif selection
-#     execpt ValueError:
-#         print('Error, input was invalid')
+while condition:
