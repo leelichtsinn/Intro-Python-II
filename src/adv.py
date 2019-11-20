@@ -50,12 +50,14 @@ new_player = Player('Lee', 'outside')
 #
 # If the user enters "q", quit the game.
 
+valid_directions = ['n', 's', 'e', 'w']
+
 def location(new_player):
     print(new_player.room,
     room[new_player.room].description)
 
 def input_validation(user_direction):
-    valid_directions = ['n', 's', 'e', 'w']
+    # valid_directions = ['n', 's', 'e', 'w']
     if user_direction == 'q':
         print('You have quit the game. Thanks for playing')
         return False
@@ -66,7 +68,7 @@ def input_validation(user_direction):
         return True
 
 def user_input():
-    valid_directions = ['n', 's', 'e', 'w']
+    # valid_directions = ['n', 's', 'e', 'w']
     location(new_player)
     print(f'Which way would you like to go, {valid_directions}?')
     user_direction = input()
